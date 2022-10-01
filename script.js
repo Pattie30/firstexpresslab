@@ -75,7 +75,7 @@ const response = ["It is certain", "It is decidedly so", "Without a doubt", "Yes
 app.get('/magic/:question', function (req, res){ 
     const {magic, question} = req.params
     const randomFrase = response[Math.floor(Math.random() * response.length)]
-    res.send   (`MAGIC 8 BALL RESPONSE: ${randomFrase}`)   
+    res.send   (`MAGIC 8 BALL RESPONSE: <h1>${randomFrase} </h1> `)   
 })
 
 
