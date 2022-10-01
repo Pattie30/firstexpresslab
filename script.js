@@ -18,22 +18,20 @@ app.get('/greeting', function (req, res){
 
 
 app.get('/greeting/:name', (req, res) => { 
-    const {name} = req.params
-    console.log(req.params);
-    console.log(req.query);
+    const {name} = req.params;
+  // console.log(req.params);
+  // console.log(req.query);
 
-    for (let client of name){
-        console.log(client);
-        if(client === name) {
-            return res.send(`Hello ${name}! Its so great to see you!`)
-        }else{
-            console.log('Client Not Found!');
-        }
-    }
-    res.send   ('Client Not Found!')
-   
-})
+    // for (let client of name){
+    //     console.log(client);
+    //     if(client === name) {
+             res.send(`Hello ${name}! Its so great to see you!`)
+        
     
+  //  res.send   ('Client Not Found!')
+   
+    
+})
 
 
 
@@ -41,13 +39,6 @@ app.get('/greeting/:name', (req, res) => {
 app.listen(3000, function(){
     console.log('Listening on Port 3000')
 } )
-
-
-
-
-
-
-
 
 
 
